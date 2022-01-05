@@ -39,7 +39,7 @@ public abstract class BoxNumbersCollection implements BoxNumbers {
 		}
 		return countOfremovedNumbers;
 	}
-
+	
 	@Override
 	public int removeInRange(int minInclusive, int maxExclusive) {
 		int sizeBeforeRemove = collection.size();

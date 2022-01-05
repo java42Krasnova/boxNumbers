@@ -97,7 +97,6 @@ class BoxNumbersTest {
 		assertEquals(3, boxNumbersForTreeSet.removeByPredicate(p -> (p % 5 == 0)));
 		assertEquals(0, boxNumbersForTreeSet.removeByPredicate(p -> (p % 14 == 0)));
 	}
-
 	//	int forList[] = {13, 20, 44, 13, 29, 15, 20, 40, 44};
 		//	int forSet[] = {13, 20, 44, 29, 15, 40, 44};
 	@Test

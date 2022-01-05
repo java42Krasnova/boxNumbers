@@ -7,7 +7,7 @@ public class BoxNumbersTreeSet extends BoxNumbersSet{
 	public BoxNumbersTreeSet() {
 		collection = new TreeSet<Integer>();
 	}
-	
+
 	@Override
 	public int removeInRange(int minInclusive, int maxExclusive) {
 		int countOfRemovedNumbers = collection.size();
