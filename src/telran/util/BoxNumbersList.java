@@ -7,16 +7,14 @@ public abstract class BoxNumbersList extends BoxNumbersCollection {
 
 	@Override
 	public int removeRepeated() {
-		int countOfremovedNumbers = 0;
+		int sizeBeforeRemove = collection.size();
 		HashSet<Integer> tmp = new HashSet<>();
 		Iterator<Integer> iterator = iterator();
 		while(iterator.hasNext()) {
 			if(!tmp.add(iterator.next())) {
-				++countOfremovedNumbers;
 				iterator.remove();
 			}
 		}
-		return countOfremovedNumbers;
-
+	return sizeBeforeRemove-tmp.size();
 	}
 }

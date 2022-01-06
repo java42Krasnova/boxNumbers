@@ -10,7 +10,6 @@ public abstract class BoxNumbersCollection implements BoxNumbers {
 	protected Collection<Integer> collection;
 	@Override
 	public Iterator<Integer> iterator() {
-		
 		return  collection.iterator();
 	}
 
@@ -26,15 +25,14 @@ public abstract class BoxNumbersCollection implements BoxNumbers {
 
 	@Override
 	public int removeByPredicate(Predicate<Integer> predicate) {
-		int countOfremovedNumbers = collection.size();
+		int sizeBeforeRemove = collection.size();
 		collection.removeIf(predicate);
-		return countOfremovedNumbers-collection.size();
+		return sizeBeforeRemove-collection.size();
 	}
 	
 	@Override
 	public int removeInRange(int minInclusive, int maxExclusive) {
 		int sizeBeforeRemove = collection.size();
-
 		collection.removeIf(el -> (el >= minInclusive && el < maxExclusive));
 		return sizeBeforeRemove - collection.size();
 	}
