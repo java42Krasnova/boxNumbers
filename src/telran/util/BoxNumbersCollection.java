@@ -43,11 +43,7 @@ public abstract class BoxNumbersCollection implements BoxNumbers {
 	@Override
 	public int removeInRange(int minInclusive, int maxExclusive) {
 		int sizeBeforeRemove = collection.size();
-		if(collection instanceof Set) {
-			collection = new  ArrayList<>(collection);
-		}
-		Collections.sort((List<Integer>)collection);
-		collection.removeIf(i -> (i >= minInclusive && i < maxExclusive));
+		removeByPredicate(i -> (i >= minInclusive && i < maxExclusive));
 		return sizeBeforeRemove - collection.size();
 	}
 
